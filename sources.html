@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · PLA Operational Concepts</title>
+<meta name="description" content="Sources used for the PLA operational concepts glossary.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400&family=Noto+Sans+SC:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="sources">
+<main>
+
+<header class="band"><div class="wrap">
+<div class="eyebrow">Reference</div>
+<h1 class="h-sec" style="max-width:20ch">Sources <em>consulted</em></h1>
+<p class="lede" style="margin-top:24px">Six works were used. The entries paraphrase them, and each entry lists the ones it rests on.</p>
+</div></header>
+<section class="band"><div class="wrap"><div class="rows" id="srcs" style="display:block"></div></div></section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var h = '';
+  Object.keys(SOURCES).forEach(function (k) {
+    var n = CONCEPTS.filter(function (c) { return c.src.indexOf(k) > -1; });
+    h += '<div id="' + k + '" style="display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--ink-20)"><div><span class="tag wine">' + SOURCES[k].short + '</span><p style="margin:12px 0 6px;max-width:70ch">' + SOURCES[k].title + '</p><p class="meta" style="margin:0">Used in ' + n.length + ' entries</p></div></div>';
+  });
+  document.getElementById('srcs').innerHTML = h;
+});
+</script>
+
+</main>
+<script src="assets/concepts.js"></script>
+<script src="assets/diagrams.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
