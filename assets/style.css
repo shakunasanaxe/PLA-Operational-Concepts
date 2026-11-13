@@ -470,3 +470,27 @@ main { overflow-x: clip; }
 .cmap .band.alt { fill: #fff; }
 
 .diagram svg .halo { paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+
+/* ---------- campaign definitions page ---------- */
+.lanes { border: var(--rule); }
+.lane-head, .lane { display: grid; grid-template-columns: 1.1fr 1.5fr 1.2fr 1.2fr; }
+.lane-head > div { padding: 12px 18px; border-bottom: 2px solid var(--ink); font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-50); }
+.lane > div { padding: 14px 18px; border-top: var(--rule); border-left: var(--rule); display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; min-height: 64px; }
+.lane > div:first-child { border-left: 0; flex-direction: column; gap: 2px; }
+.lane .ln { font-weight: 500; font-size: 15px; }
+.lane .ls { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--ink-50); text-transform: uppercase; }
+.cp { border: var(--rule); background: var(--paper); padding: 7px 12px; font-size: 13.5px; text-align: left; transition: background .15s ease; }
+.cp:hover { background: var(--deep); }
+.cp[aria-pressed="true"] { background: var(--wine); color: #fff; border-color: var(--wine); }
+.cp.sea { border-left: 2px solid var(--wine); }
+@media (max-width: 800px) { .lane-head { display: none; } .lane { grid-template-columns: 1fr; } .lane > div { border-left: 0; min-height: 0; } }
+
+.cdetail { display: grid; grid-template-columns: 7fr 5fr; gap: 48px; align-items: start; margin-top: 32px; border-top: 2px solid var(--ink); padding-top: 32px; }
+@media (max-width: 960px) { .cdetail { grid-template-columns: 1fr; gap: 28px; } }
+.cdetail h3 { font-size: 36px; line-height: 1.1; letter-spacing: -0.015em; font-weight: 400; margin: 6px 0 4px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 10px 0; border-bottom: var(--rule); font-size: 14.5px; color: var(--ink-70); }
+.steps li::before { content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: var(--wine); padding-top: 3px; }
+.mini-h { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-50); margin: 24px 0 8px; display: block; }
+.basis-src { background: var(--wine-soft); }
+.basis-gen { background: var(--gold-soft); }

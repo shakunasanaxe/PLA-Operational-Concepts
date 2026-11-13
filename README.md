@@ -11,7 +11,8 @@ A small static site that defines key operational concepts in the Chinese People'
 | `map.html` | An interactive map of how the 38 concepts connect |
 | `gallery.html` | All 17 diagrams, with enlargement |
 | `wtc.html` | 22 examples of the concepts at work in the Western Theatre |
-| `sources.html` | The six sources used |
+| `campaigns.html` | Fourteen PLA campaign types, each defined and drawn |
+| `sources.html` | The sources used |
 
 ## Publishing on GitHub Pages
 
@@ -26,7 +27,9 @@ To preview locally, run `python3 -m http.server 8000` in this folder and open `h
 | Path | What it holds |
 |---|---|
 | `assets/concepts.js` | All entries and the source list |
-| `assets/diagrams.js` | The diagrams, drawn as inline SVG |
+| `assets/diagrams.js` | The concept diagrams, drawn as inline SVG |
+| `assets/campaigns.js` | The fourteen campaign definitions |
+| `assets/campaign-diagrams.js` | The campaign diagrams |
 | `assets/app.js` | Navigation, search, concept pages, map and gallery |
 | `assets/style.css` | Design tokens and components |
 

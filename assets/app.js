@@ -41,7 +41,7 @@
 
   /* ------------------------------------------------------------ shell */
   const NAV = [
-    ['Glossary', [['index.html', 'A to Z'], ['map.html', 'Concept Map'], ['gallery.html', 'Diagram Gallery'], ['wtc.html', 'In the Western Theatre']]],
+    ['Glossary', [['index.html', 'A to Z'], ['map.html', 'Concept Map'], ['gallery.html', 'Diagram Gallery'], ['wtc.html', 'In the Western Theatre'], ['campaigns.html', 'Campaign Definitions']]],
     ['Themes', THEMES.map((t) => ['index.html#theme=' + t.id, t.name])],
     ['Reference', [['sources.html', 'Sources']]],
   ];
@@ -162,6 +162,7 @@
           <div class="prose">${c.def.map((p) => `<p>${esc(p)}</p>`).join('')}</div>
           ${c.why ? `<div class="aside" style="margin-top:8px"><strong>Why it matters.</strong> ${esc(c.why)}</div>` : ''}
           ${practices(c).map((x) => `<div class="practice"><span class="meta">In practice · ${esc(SOURCES[x.s].short)}</span>${esc(x.t)}</div>`).join('')}
+          ${c.id === 'joint-campaigns' ? '<p style="margin-top:24px"><a class="btn sm" href="campaigns.html">See the fourteen campaign types</a></p>' : ''}
           <div class="eyebrow" style="margin-top:28px">Sources</div>
           <div class="srcs-line">${c.src.map((s) => `<a class="tag" href="sources.html#${s}" title="${esc(SOURCES[s].title)}">${esc(SOURCES[s].short)}</a>`).join('')}</div>
         </div>
